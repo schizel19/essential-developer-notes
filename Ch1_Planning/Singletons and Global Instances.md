@@ -1,5 +1,5 @@
 
-###Singleton
+### Singleton
 
 The Singleton pattern as described in the Design Patterns book (GOF - Gang of Four) by Gamma, Johnson, Vlissides, and Helm is a way to make sure that a class has only one instance and it provides a single point of access to it. The pattern specifies that the class itself should be responsible for keeping track of its sole instance. It can further ensure that no other instance can be created by intercepting requests for creating new objects and provide a way to access the sole instance.
 
