@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class ApiClient {
+    
+    static let instance = ApiClient()
+    private init() {}
+    
+    static func getInstance() -> ApiClient {
+        return instance
+    }
+}
+
+let client = ApiClient.getInstance()
