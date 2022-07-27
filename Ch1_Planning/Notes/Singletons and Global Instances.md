@@ -14,7 +14,7 @@ Singleton.shared.sayHello() // prints Hello
 // Singleton() not allowed
 ```
 
-In the book, a Singleton should be open for extensions and modifications in the future. As such, there are two ways to make it:
+In the book, a Singleton should be open for extensions and modifications in the future. As such, there are two ways to make it (in Swift):
 
 ```swift
 class MediaClient {
@@ -39,7 +39,7 @@ extension ImageClient {
 ```
 
 ***singleton***
-Singleton with a lower case s constitutes a class that is being instantiated only one time in the whole lifecycle of the app; however its API does not prohibit developers from creating a new instance of the class.
+Singleton with a lower case *s* constitutes a class that is being instantiated only one time in the whole lifecycle of the app; however its API does not prohibit developers from creating a new instance of the class.
 \
 Some examples of such objects are Apple’s `URLSession.shared` and `UserDefaults.standard`. Although they offer a shared instance for accessing an immutable reference (get only) of themselves, they also allow their clients to create other instances through their initializers.
 
