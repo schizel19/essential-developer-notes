@@ -14,7 +14,7 @@ Non BDD:
 > **Story**\
 > As a user\
 > I want the app to load the feed\
-> So I can see the feed
+> So I can see the feed\
 > **Acceptance criteria**\
 > Given a user\
 > When the user opens the feed\
@@ -24,17 +24,17 @@ BDD:
 > **Story 1**\
 > As an online customer\
 > I want the app to automatically load my latest image feed\
-> So I can always enjoy the newest images of my friends
+> So I can always enjoy the newest images of my friends\
 > **Acceptance criteria**\
 > Given the customer has connectivity\
 > When the customer requests to see the feed\
-> Then the app should display the latest feed from remote
+> Then the app should display the latest feed from remote\
 > And replace the cache with the new feed
 
 > **Story 2**\
 > As an offline customer\
 > I want the app to show the latest saved version of my image feed\
-> So I can always enjoy images of my friends
+> So I can always enjoy images of my friends\
 > **Acceptance criteria**\
 > Given the customer doesn't have connectivity\
 > And there’s a cached version of the feed\
