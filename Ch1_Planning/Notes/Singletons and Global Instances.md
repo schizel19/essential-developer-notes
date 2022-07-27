@@ -56,7 +56,7 @@ class CatFeedViewModelTest {
     func test() {
         let vm = CatFeedViewModel()
         vm.catFeed = HomeCatFeed()
-        vm.showCats()
+        vm.loadCats()
     }
 }
 ```
