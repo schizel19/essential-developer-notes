@@ -17,7 +17,7 @@ class SingletonClone: Singleton {
 }
 ```
 
-This allows the singleton to be subclassed and overwritten; or
+This allows the singleton to be subclassed and overwritten; or utilizing *extension* with Swift and allows the Singleton to be *final*
 ```swift
 final class Singleton {
     func doSomething(){}
@@ -26,8 +26,6 @@ extension Singleton {
     func doAnotherThing(){}
 }
 ```
-
-where only extension of the singleton is allowed.
 
 ***singleton***
 Singleton with a lower case s constitutes a class that is being instantiated only one time in the whole lifecycle of the app; however its API does not prohibit developers from creating a new instance of the class.
