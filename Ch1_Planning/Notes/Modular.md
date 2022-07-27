@@ -7,45 +7,43 @@ The goal of good software design is to balance the trade-offs of solving the cur
 *"A good architecture is a form of good communication."*
 
 **BDD**
+
 *Behavior-driven development* is a nice way of gathering relevant information via conversations. It encourages team to use conversation and concrete examples to formalize a shared understanding of how an application should behave. The biggest problem is when a developer sees a requirement and are afraid to ask a question.
 
 Non BDD:
->   **Story**
->   As a user
->   I want the app to load the feed 
->   So I can see the feed
-
->   **Acceptance criteria**
->   Given a user
->   When the user opens the feed 
->   Then the feed is displayed 
+> **Story**\
+> As a user\
+> I want the app to load the feed\
+> So I can see the feed
+> **Acceptance criteria**\
+> Given a user\
+> When the user opens the feed\
+> Then the feed is displayed 
 
 BDD:
-> **Story 1**
-> As an online customer 
-> I want the app to automatically load my latest image feed 
+> **Story 1**\
+> As an online customer\
+> I want the app to automatically load my latest image feed\
 > So I can always enjoy the newest images of my friends
-
-> **Acceptance criteria**
-> Given the customer has connectivity 
-> When the customer requests to see the feed
+> **Acceptance criteria**\
+> Given the customer has connectivity\
+> When the customer requests to see the feed\
 > Then the app should display the latest feed from remote
 > And replace the cache with the new feed
 
-> **Story 2**
-> As an offline customer
-> I want the app to show the latest saved version of my image feed
+> **Story 2**\
+> As an offline customer\
+> I want the app to show the latest saved version of my image feed\
 > So I can always enjoy images of my friends
-
-> **Acceptance criteria**
-> Given the customer doesn't have connectivity
-> And there’s a cached version of the feed
-> When the customer requests to see the feed
-> Then the app should display the latest feed saved
-> **BUT IF**
-> Given the customer doesn't have connectivity
-> And the cache is empty
-> When the customer requests to see the feed
+> **Acceptance criteria**\
+> Given the customer doesn't have connectivity\
+> And there’s a cached version of the feed\
+> When the customer requests to see the feed\
+> Then the app should display the latest feed saved\
+> **AND IF**\
+> Given the customer doesn't have connectivity\
+> And the cache is empty\
+> When the customer requests to see the feed\
 > Then the app should display an error message
 
 \
