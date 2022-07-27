@@ -41,16 +41,15 @@ You can test Singletons by subclassing and property injection
 class CatFeed {
     static let shared = CatFeed()
     private init() {}
-    func showCats(){
-    }
+    func showCats(){}
 }
 class HomeCatFeed: CatFeed {
-    override func showCats(){ }
+    override func showCats(){}
 }
 class CatFeedViewModel {
     var catFeed = CatFeed.shared
     func loadCats() -> {
-        catFeed.showCats { }
+        catFeed.showCats()
     }
 }
 class CatFeedViewModelTest {
