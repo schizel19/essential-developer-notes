@@ -48,6 +48,7 @@ BDD:
 
 \
 **Use Cases**
+
 Provides an algorithmic view to the requirements. Can be used alongside BDD to better understand the features of the app. It looks like a recipe that is easy to follow and easy to translate to code.
 
 *Load Feed Use Case*
