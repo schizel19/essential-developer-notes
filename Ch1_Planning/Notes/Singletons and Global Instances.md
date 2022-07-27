@@ -8,22 +8,24 @@ The Singleton pattern as described in the *Design Patterns book (GOF - Gang of F
 In the book, a Singleton should be open for extensions and modifications in the future. As such, there are two ways to make it:
 
 ```swift
-class Singleton {
-    func doSomething(){}
+class MediaClient {
+    func loadMusic(){}
 }
-class SingletonClone: Singleton {
-    func doAnotherThing(){ }
-    override func doSomething(){}
+class PlayerClient: MediaClient {
+    func playMusic(){}
+    override func loadMusic(){
+        super.loadMusic()
+    }
 }
 ```
 
 This allows the singleton to be subclassed and overwritten; or utilizing *extension* with Swift and allows the Singleton to be *final*
 ```swift
-final class Singleton {
-    func doSomething(){}
+final class ImageClient {
+    func loadImage(){}
 }
-extension Singleton {
-    func doAnotherThing(){}
+extension ImageClient {
+    func loadImageThumbnail(){}
 }
 ```
 
@@ -36,25 +38,26 @@ Some examples of such objects are Apple’s `URLSession.shared` and `UserDefault
 You can test Singletons by subclassing and property injection
 
 ```swift
-class Singleton {
-    static let shared = Singleton()
+class CatFeed {
+    static let shared = CatFeed()
     private init() {}
-    func doSomething(){}
-}
-class SingletonClone: Singleton {
-    override func doSomething(){}
-}
-class SomeViewModel {
-    var singleton = Singleton.shared
-    func doSomething {
-        singleton.doSomething { }
+    func showCats(){
     }
 }
-class SomeViewModelTest {
+class HomeCatFeed: CatFeed {
+    override func showCats(){ }
+}
+class CatFeedViewModel {
+    var catFeed = CatFeed.shared
+    func loadCats() -> {
+        catFeed.showCats { }
+    }
+}
+class CatFeedViewModelTest {
     func test() {
-        let vm = SomeViewModel()
-        vm.singleton = SingletonClone()
-        vm.doSomething()
+        let vm = CatFeedViewModel()
+        vm.catFeed = HomeCatFeed()
+        vm.showCats()
     }
 }
 ```
