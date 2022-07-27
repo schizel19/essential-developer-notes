@@ -11,6 +11,13 @@
 		34535CB2288FE18700CCA78B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CB1288FE18700CCA78B /* ContentView.swift */; };
 		34535CB4288FE18A00CCA78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34535CB3288FE18A00CCA78B /* Assets.xcassets */; };
 		34535CB7288FE18A00CCA78B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34535CB6288FE18A00CCA78B /* Preview Assets.xcassets */; };
+		34535CDA2890E8BF00CCA78B /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CD92890E8BF00CCA78B /* Architecture.swift */; };
+		34535CDC2890E8E900CCA78B /* ArchitectureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CDB2890E8E900CCA78B /* ArchitectureTest.swift */; };
+		34535CDF2890E95600CCA78B /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CDE2890E95600CCA78B /* FeedItem.swift */; };
+		34535CE32890EA1500CCA78B /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CE22890EA1500CCA78B /* RemoteFeedLoader.swift */; };
+		34535CED2890EE9800CCA78B /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CEC2890EE9800CCA78B /* LocalFeedLoader.swift */; };
+		34535CEF2890EEA500CCA78B /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CEE2890EEA500CCA78B /* FeedLoader.swift */; };
+		34535CF12890EEFA00CCA78B /* RemoteWithLocalFallbackFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535CF02890EEFA00CCA78B /* RemoteWithLocalFallbackFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,13 @@
 		34535CB3288FE18A00CCA78B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34535CB6288FE18A00CCA78B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34535CBC288FE18B00CCA78B /* ModularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34535CD92890E8BF00CCA78B /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
+		34535CDB2890E8E900CCA78B /* ArchitectureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureTest.swift; sourceTree = "<group>"; };
+		34535CDE2890E95600CCA78B /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		34535CE22890EA1500CCA78B /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		34535CEC2890EE9800CCA78B /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		34535CEE2890EEA500CCA78B /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		34535CF02890EEFA00CCA78B /* RemoteWithLocalFallbackFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWithLocalFallbackFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +85,12 @@
 		34535CAE288FE18700CCA78B /* Modular */ = {
 			isa = PBXGroup;
 			children = (
+				34535CE12890E9CE00CCA78B /* FeedLoader */,
 				34535CAF288FE18700CCA78B /* ModularApp.swift */,
 				34535CB1288FE18700CCA78B /* ContentView.swift */,
 				34535CB3288FE18A00CCA78B /* Assets.xcassets */,
 				34535CB5288FE18A00CCA78B /* Preview Content */,
+				34535CD92890E8BF00CCA78B /* Architecture.swift */,
 			);
 			path = Modular;
 			sourceTree = "<group>";
@@ -90,8 +106,21 @@
 		34535CBF288FE18B00CCA78B /* ModularTests */ = {
 			isa = PBXGroup;
 			children = (
+				34535CDB2890E8E900CCA78B /* ArchitectureTest.swift */,
 			);
 			path = ModularTests;
+			sourceTree = "<group>";
+		};
+		34535CE12890E9CE00CCA78B /* FeedLoader */ = {
+			isa = PBXGroup;
+			children = (
+				34535CDE2890E95600CCA78B /* FeedItem.swift */,
+				34535CE22890EA1500CCA78B /* RemoteFeedLoader.swift */,
+				34535CEC2890EE9800CCA78B /* LocalFeedLoader.swift */,
+				34535CEE2890EEA500CCA78B /* FeedLoader.swift */,
+				34535CF02890EEFA00CCA78B /* RemoteWithLocalFallbackFeedLoader.swift */,
+			);
+			path = FeedLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +176,7 @@
 					};
 					34535CBB288FE18B00CCA78B = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = 34535CAB288FE18700CCA78B;
 					};
 				};
@@ -194,7 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34535CF12890EEFA00CCA78B /* RemoteWithLocalFallbackFeedLoader.swift in Sources */,
+				34535CEF2890EEA500CCA78B /* FeedLoader.swift in Sources */,
+				34535CED2890EE9800CCA78B /* LocalFeedLoader.swift in Sources */,
+				34535CDF2890E95600CCA78B /* FeedItem.swift in Sources */,
 				34535CB2288FE18700CCA78B /* ContentView.swift in Sources */,
+				34535CDA2890E8BF00CCA78B /* Architecture.swift in Sources */,
+				34535CE32890EA1500CCA78B /* RemoteFeedLoader.swift in Sources */,
 				34535CB0288FE18700CCA78B /* ModularApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34535CDC2890E8E900CCA78B /* ArchitectureTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,15 +431,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V755NHP8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patrickdomingo.ModularTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Modular.app/Modular";
@@ -414,11 +458,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V755NHP8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patrickdomingo.ModularTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
