@@ -7,18 +7,18 @@ The goal of good software design is to balance the trade-offs of solving the cur
 *"A good architecture is a form of good communication."*
 
 **BDD**
-*Behavior-driven development* is a nice way of gathering relevant information via conversations. It encourages team to use conversation and concrete examples to formalize a shared understanding of how an application should behave. The biggest problem is when a developer sees a requirement and are afraid to ask a question.
+Behavior-driven development* is a nice way of gathering relevant information via conversations. It encourages team to use conversation and concrete examples to formalize a shared understanding of how an application should behave. The biggest problem is when a developer sees a requirement and are afraid to ask a question.
 
 Non BDD:
-> **Story**
-> As a user
-> I want the app to load the feed 
-> So I can see the feed
+>   **Story**
+>   As a user
+>   I want the app to load the feed 
+>   So I can see the feed
 
-> **Acceptance criteria**
-> Given a user
-> When the user opens the feed 
-> Then the feed is displayed 
+>   **Acceptance criteria**
+>   Given a user
+>   When the user opens the feed 
+>   Then the feed is displayed 
 
 BDD:
 > **Story 1**
