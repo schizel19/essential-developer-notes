@@ -29,7 +29,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     func test_loadTwice_requestsDataFromURLTwice() {
         let url = URL(string: "https://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)
-        
+         
         sut.load { _ in }
         sut.load { _ in }
         
