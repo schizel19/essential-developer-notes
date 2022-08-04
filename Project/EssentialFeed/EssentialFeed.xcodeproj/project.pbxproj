@@ -131,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				34082445289A4C49002E68FF /* Helpers */,
+				34461388289BAA780076062D /* FeedStoreSpecs.swift */,
 				34082438289A1BAC002E68FF /* CacheFeedUseCaseTests.swift */,
 				34082443289A4424002E68FF /* LoadFeedFromCacheUseCaseTests.swift */,
 				34082448289A6573002E68FF /* ValidateFeedCacheUseCase.swift */,
@@ -196,7 +197,6 @@
 				8002F88B2898042600FD366B /* Helpers */,
 				34082437289A1B83002E68FF /* Feed Cache */,
 				340824212897A891002E68FF /* Feed API */,
-				34461388289BAA780076062D /* FeedStoreSpecs.swift */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
