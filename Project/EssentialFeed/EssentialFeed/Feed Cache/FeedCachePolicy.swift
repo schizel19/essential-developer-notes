@@ -20,6 +20,6 @@ internal final class FeedCachePolicy {
         guard let maxCacheAge = calendar.date(byAdding: .day, value: maxCacheAgeInDays, to: timestamp) else {
             return false
         }
-        return  date < maxCacheAge
+        return date < maxCacheAge
     }
 }
