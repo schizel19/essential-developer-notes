@@ -7,14 +7,11 @@
 
 import Foundation
 
-public enum CachedFeed {
-    case empty
-    case found(feed: [LocalFeedImage], timestamp: Date)
-}
+public typealias CachedFeed = (feed: [LocalFeedImage], timestamp: Date)
 
 public protocol FeedStore {
     
-    typealias RetrievalResult = Result<CachedFeed, Error>
+    typealias RetrievalResult = Result<CachedFeed?, Error>
     typealias RetrievalCompletion = (RetrievalResult) -> Void
 
     typealias InsertionCompletion = (Error?) -> Void
