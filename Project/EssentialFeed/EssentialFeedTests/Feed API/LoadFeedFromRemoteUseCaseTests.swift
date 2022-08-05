@@ -29,7 +29,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     func test_loadTwice_requestsDataFromURLTwice() {
         let url = URL(string: "https://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)
-         
+        
         sut.load { _ in }
         sut.load { _ in }
         
@@ -147,8 +147,8 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
-    private func makeItem(id: UUID  , description: String? = nil, location: String? = nil, imageUrl: URL) -> (model: FeedItem, json: [String: Any]) {
-        let item = FeedItem(id: id, description: description, location: location, imageURL: imageUrl)
+    private func makeItem(id: UUID  , description: String? = nil, location: String? = nil, imageUrl: URL) -> (model: FeedImage, json: [String: Any]) {
+        let item = FeedImage(id: id, description: description, location: location, url: imageUrl)
         let json = [
             "id": id.uuidString  ,
             "description": description,
