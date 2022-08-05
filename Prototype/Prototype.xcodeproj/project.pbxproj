@@ -14,6 +14,7 @@
 		344613CF289CF1570076062D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344613CD289CF1570076062D /* LaunchScreen.storyboard */; };
 		344613D7289CFA2A0076062D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344613D6289CFA2A0076062D /* FeedViewController.swift */; };
 		344613D9289CFBD30076062D /* FeedImageViewModel+PrototypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344613D8289CFBD30076062D /* FeedImageViewModel+PrototypeData.swift */; };
+		344613DB289CFC860076062D /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344613DA289CFC860076062D /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		344613D0289CF1570076062D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344613D6289CFA2A0076062D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		344613D8289CFBD30076062D /* FeedImageViewModel+PrototypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageViewModel+PrototypeData.swift"; sourceTree = "<group>"; };
+		344613DA289CFC860076062D /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				344613CD289CF1570076062D /* LaunchScreen.storyboard */,
 				344613D0289CF1570076062D /* Info.plist */,
 				344613D6289CFA2A0076062D /* FeedViewController.swift */,
+				344613DA289CFC860076062D /* FeedImageCell.swift */,
 				344613D8289CFBD30076062D /* FeedImageViewModel+PrototypeData.swift */,
 			);
 			path = Prototype;
@@ -145,6 +148,7 @@
 				344613D7289CFA2A0076062D /* FeedViewController.swift in Sources */,
 				344613D9289CFBD30076062D /* FeedImageViewModel+PrototypeData.swift in Sources */,
 				344613C5289CF1540076062D /* SceneDelegate.swift in Sources */,
+				344613DB289CFC860076062D /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
