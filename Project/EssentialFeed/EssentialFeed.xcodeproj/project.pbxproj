@@ -45,6 +45,7 @@
 		34535D1A2890FA9A00CCA78B /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535D192890FA9A00CCA78B /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		34535D1D28911AB200CCA78B /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535D1C28911AB200CCA78B /* RemoteFeedLoader.swift */; };
 		8002F88D2898044500FD366B /* XCTTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8002F88C2898044500FD366B /* XCTTestCase+MemoryLeakTracking.swift */; };
+		80A4C77F289E4C4300B70AB1 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4C77E289E4C4300B70AB1 /* FeedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		34535D192890FA9A00CCA78B /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		34535D1C28911AB200CCA78B /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		8002F88C2898044500FD366B /* XCTTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		80A4C77E289E4C4300B70AB1 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				34535D082890F21A00CCA78B /* EssentialFeedTests */,
 				3408242B2898CF43002E68FF /* EssentialFeedAPIEndToEndTests */,
 				344613A2289CA2590076062D /* EssentialFeedCacheIntegrationTests */,
+				80A4C77D289E4C0C00B70AB1 /* EssentialFeediOSTests */,
 				34535CFD2890F21A00CCA78B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -319,6 +322,14 @@
 				3408244C289A6894002E68FF /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		80A4C77D289E4C0C00B70AB1 /* EssentialFeediOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				80A4C77E289E4C4300B70AB1 /* FeedViewControllerTests.swift */,
+			);
+			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +481,7 @@
 					};
 					344613E7289D06160076062D = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					34535CFB2890F21A00CCA78B = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -581,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A4C77F289E4C4300B70AB1 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,16 +795,23 @@
 		344613F4289D06160076062D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V755NHP8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patrickdomingo.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -800,11 +820,17 @@
 		344613F5289D06160076062D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V755NHP8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patrickdomingo.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
