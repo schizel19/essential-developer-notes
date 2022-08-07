@@ -55,6 +55,7 @@
 		80A62F3F289FC27E00A4D69E /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F3E289FC27E00A4D69E /* FeedImageDataLoader.swift */; };
 		80A62F47289FC30400A4D69E /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F46289FC30400A4D69E /* UIImage+TestHelpers.swift */; };
 		80A62F49289FC34100A4D69E /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F48289FC34100A4D69E /* UIRefreshControl+TestHelpers.swift */; };
+		80A62F4B289FC36900A4D69E /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F4A289FC36900A4D69E /* UIButton+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		80A62F3E289FC27E00A4D69E /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		80A62F46289FC30400A4D69E /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		80A62F48289FC34100A4D69E /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		80A62F4A289FC36900A4D69E /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +445,7 @@
 			children = (
 				80A62F46289FC30400A4D69E /* UIImage+TestHelpers.swift */,
 				80A62F48289FC34100A4D69E /* UIRefreshControl+TestHelpers.swift */,
+				80A62F4A289FC36900A4D69E /* UIButton+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A4C786289E4FED00B70AB1 /* XCTTestCase+MemoryLeakTracking.swift in Sources */,
+				80A62F4B289FC36900A4D69E /* UIButton+TestHelpers.swift in Sources */,
 				80A62F49289FC34100A4D69E /* UIRefreshControl+TestHelpers.swift in Sources */,
 				80A4C77F289E4C4300B70AB1 /* FeedViewControllerTests.swift in Sources */,
 				80A62F47289FC30400A4D69E /* UIImage+TestHelpers.swift in Sources */,
