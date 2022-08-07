@@ -62,6 +62,7 @@
 		80A62F53289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F52289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift */; };
 		80A62F55289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F54289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift */; };
 		80A62F57289FC7AF00A4D69E /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F56289FC7AF00A4D69E /* FeedRefreshViewController.swift */; };
+		80A62F59289FCC2100A4D69E /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F58289FCC2100A4D69E /* FeedImageCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		80A62F52289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+LoaderSpy.swift"; sourceTree = "<group>"; };
 		80A62F54289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Assertions.swift"; sourceTree = "<group>"; };
 		80A62F56289FC7AF00A4D69E /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
+		80A62F58289FCC2100A4D69E /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 			children = (
 				80A4C788289E59EC00B70AB1 /* FeedViewController.swift */,
 				80A62F56289FC7AF00A4D69E /* FeedRefreshViewController.swift */,
+				80A62F58289FCC2100A4D69E /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				80A62F3C289FA29200A4D69E /* UIView+Shimmering.swift in Sources */,
 				80A4C789289E59EC00B70AB1 /* FeedViewController.swift in Sources */,
 				80A4C78B289F8F5600B70AB1 /* FeedImageCell.swift in Sources */,
+				80A62F59289FCC2100A4D69E /* FeedImageCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
