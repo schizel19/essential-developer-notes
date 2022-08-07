@@ -436,7 +436,6 @@
 		80A62F43289FC2CB00A4D69E /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				80A62F45289FC2F400A4D69E /* Helpers */,
 				80A62F44289FC2D400A4D69E /* Controllers */,
 			);
 			path = "Feed UI";
@@ -445,6 +444,7 @@
 		80A62F44289FC2D400A4D69E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				80A62F45289FC2F400A4D69E /* Helpers */,
 				80A4C77E289E4C4300B70AB1 /* FeedViewControllerTests.swift */,
 			);
 			path = Controllers;
