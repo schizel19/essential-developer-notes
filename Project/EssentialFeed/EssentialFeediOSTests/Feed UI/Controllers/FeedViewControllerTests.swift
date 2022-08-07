@@ -180,7 +180,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         let invalidImageData = Data("invalid image data".utf8)
         loader.completeImageLoading(with: invalidImageData, at: 0)
-        XCTAssertEqual(view? .isShowingRetryAction, true, "Expected retry action once image loading completes with invalid image data")
+        XCTAssertEqual(view?.isShowingRetryAction, true, "Expected retry action once image loading completes with invalid image data")
     }
     
     func test_feedImageViewRetryAction_retriesImageLoad() {
