@@ -60,6 +60,7 @@
 		80A62F4F289FC40B00A4D69E /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F4E289FC40B00A4D69E /* FeedViewController+TestHelpers.swift */; };
 		80A62F51289FC45000A4D69E /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F50289FC45000A4D69E /* FeedImageCell+TestHelpers.swift */; };
 		80A62F53289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F52289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift */; };
+		80A62F55289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A62F54289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		80A62F4E289FC40B00A4D69E /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		80A62F50289FC45000A4D69E /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		80A62F52289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+LoaderSpy.swift"; sourceTree = "<group>"; };
+		80A62F54289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Assertions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +460,7 @@
 				80A62F4E289FC40B00A4D69E /* FeedViewController+TestHelpers.swift */,
 				80A62F50289FC45000A4D69E /* FeedImageCell+TestHelpers.swift */,
 				80A62F52289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift */,
+				80A62F54289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				80A62F53289FC4B200A4D69E /* FeedViewControllerTests+LoaderSpy.swift in Sources */,
 				80A62F4F289FC40B00A4D69E /* FeedViewController+TestHelpers.swift in Sources */,
 				80A4C77F289E4C4300B70AB1 /* FeedViewControllerTests.swift in Sources */,
+				80A62F55289FC4FB00A4D69E /* FeedViewControllerTests+Assertions.swift in Sources */,
 				80A62F47289FC30400A4D69E /* UIImage+TestHelpers.swift in Sources */,
 				80A62F51289FC45000A4D69E /* FeedImageCell+TestHelpers.swift in Sources */,
 			);
