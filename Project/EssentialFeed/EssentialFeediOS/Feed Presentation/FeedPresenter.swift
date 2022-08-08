@@ -19,9 +19,14 @@ final class FeedPresenter {
     private let feedView: FeedView
     private let loadingView: FeedLoadingView
     
+    
     init(feedView: FeedView, loadingView: FeedLoadingView) {
         self.loadingView = loadingView
         self.feedView = feedView
+    }
+    
+    static var title: String {
+        return "My Feed"
     }
     
     func didStartLoadingFeed() {
