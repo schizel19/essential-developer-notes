@@ -1,6 +1,6 @@
 # Essential Developer Notes
 
-[![Build Status](https://app.travis-ci.com/schizel19/essential-developer-notes.svg?token=1Yk8hFsoSD1hvdo4FW5H&branch=master)](https://app.travis-ci.com/schizel19/essential-developer-notes)
+[![CI-macOS](https://github.com/schizel19/essential-developer-notes/actions/workflows/CI-macOS.yaml/badge.svg)](https://github.com/schizel19/essential-developer-notes/actions/workflows/CI-macOS.yaml) [![CI-iOS](https://github.com/schizel19/essential-developer-notes/actions/workflows/CI-iOS.yaml/badge.svg)](https://github.com/schizel19/essential-developer-notes/actions/workflows/CI-iOS.yaml)
 
 ## BDD Specs
 
