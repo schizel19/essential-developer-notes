@@ -5,10 +5,7 @@
 //  Created by Patrick Domingo on 8/7/22.
 //
 
-import Foundation
 import EssentialFeed
-
-
 
 final class FeedViewModel {
     typealias Observer<T> = (T) -> Void
