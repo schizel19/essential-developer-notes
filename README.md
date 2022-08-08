@@ -143,7 +143,11 @@ Given the customer doesn't have connectivity
 
 ## Architecture
 
-![Feed Loading Feature](feed_architecture.png)
+![Feed Whole Architecture](feed_architecture.png)
+
+## iOS UI Architecture
+
+![iOS Architecture](feed_ui_architecture.png)
 
 ## Model Specs
 
