@@ -5,6 +5,7 @@
 //  Created by Patrick Domingo on 8/6/22.
 //
 
+import EssentialFeed
 import UIKit
 
 protocol FeedViewControllerDelegate {
@@ -58,11 +59,11 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
         delegate?.didRequestFeedRefresh()
     }
     
-    func display(_ viewModel: FeedLoadingViewModel) {
+    public func display(_ viewModel: FeedLoadingViewModel) {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
     
-    func display(_ viewModel: FeedErrorViewModel) {
+    public func display(_ viewModel: FeedErrorViewModel) {
         errorView?.message = viewModel.message
     }
 }
