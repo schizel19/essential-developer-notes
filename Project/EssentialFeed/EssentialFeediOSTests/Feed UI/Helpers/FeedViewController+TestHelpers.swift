@@ -60,4 +60,8 @@ extension FeedViewController {
     var feedImagesSection: Int {
         return 0
     }
+    
+    var errorMessage: String? {
+        return errorView.message
+    }
 }
