@@ -13,7 +13,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
      
     func test_init_doesNotRequestDataFromURL() {
         let (_, client) = makeSUT()
-        XCTAssertTrue(client.requestURLs.isEmpty)
+        XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
     func test_load_requestsDataFromURL() {
@@ -23,7 +23,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         // Act
         sut.load { _ in }
         // Assert
-        XCTAssertEqual(client.requestURLs, [url])
+        XCTAssertEqual(client.requestedURLs, [url])
     }
     
     func test_loadTwice_requestsDataFromURLTwice() {
@@ -33,7 +33,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         sut.load { _ in }
         sut.load { _ in }
         
-        XCTAssertEqual(client.requestURLs, [url, url])
+        XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
     func test_load_deliversErrorOnClientError() {
@@ -165,32 +165,6 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     private func failure(_ error: RemoteFeedLoader.Error) -> RemoteFeedLoader.Result {
         return .failure(error)
-    }
-    
-    private class HTTPClientSpy: HTTPClient {
-        private struct Task: HTTPClientTask {
-            func cancel() {}
-        }
-        
-        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
-
-         var requestURLs: [URL] {
-            return messages.map { $0.url }
-        }
-        
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
-            messages.append((url, completion))
-            return Task()
-        }
-        
-        func complete(with error: Error, at index: Int = 0) {
-            messages[index].completion(.failure(error))
-        }
-        
-        func complete(withStatusCode code: Int, data: Data, at index: Int = 0) {
-            let response = HTTPURLResponse(url: requestURLs[index], statusCode: code, httpVersion: nil, headerFields: nil)!
-            messages[index].completion(.success((data, response)))
-        }
     }
 }
 
