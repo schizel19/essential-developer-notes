@@ -60,7 +60,7 @@ class FeedPresenterTests: XCTestCase {
             .display(errorMessage: .none),
             .display(isLoading: true)])
     }
-
+    
     // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedPresenter, view: ViewSpy) {
