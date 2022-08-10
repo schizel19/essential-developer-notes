@@ -8,6 +8,8 @@
 import XCTest
 import EssentialFeed
 
+protocol FeedLoaderTestCase: XCTestCase {}
+
 extension XCTestCase {
     func expect(_ sut: FeedLoader, toCompleteWith expectedResult: FeedLoader.Result, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "wait for load completion")
