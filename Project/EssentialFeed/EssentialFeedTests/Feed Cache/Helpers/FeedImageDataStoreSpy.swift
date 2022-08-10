@@ -1,5 +1,5 @@
 //
-//  FeedImageDataStorySpy.swift
+//  FeedImageDataStoreSpy.swift
 //  EssentialFeedTests
 //  
 //  Created by Patrick Domingo on 8/10/22
@@ -8,7 +8,7 @@
 import Foundation
 import EssentialFeed
 
-class FeedImageDataStorySpy: FeedImageDataStore {
+class FeedImageDataStoreSpy: FeedImageDataStore {
     enum Message: Equatable {
         case insert(data: Data, for: URL)
         case retrieve(dataFor: URL)
