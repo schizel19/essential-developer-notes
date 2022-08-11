@@ -76,6 +76,7 @@
 		3446146528A33B580076062D /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446146428A33B580076062D /* CoreDataFeedStore+FeedImageDataLoader.swift */; };
 		3446146728A33D3D0076062D /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446146628A33D3D0076062D /* CoreDataFeedStore+FeedStore.swift */; };
 		344614FC28A39B1A0076062D /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344614FB28A39B1A0076062D /* FeedCache.swift */; };
+		3446150628A498D00076062D /* FeedImageDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446150528A498D00076062D /* FeedImageDataCache.swift */; };
 		34535D052890F21A00CCA78B /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34535CFC2890F21A00CCA78B /* EssentialFeed.framework */; };
 		34535D152890F31300CCA78B /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535D142890F31300CCA78B /* FeedImage.swift */; };
 		34535D172890F36000CCA78B /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34535D162890F36000CCA78B /* FeedLoader.swift */; };
@@ -222,6 +223,7 @@
 		3446146428A33B580076062D /* CoreDataFeedStore+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		3446146628A33D3D0076062D /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		344614FB28A39B1A0076062D /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
+		3446150528A498D00076062D /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
 		34535CFC2890F21A00CCA78B /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34535D042890F21A00CCA78B /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34535D142890F31300CCA78B /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				34535D142890F31300CCA78B /* FeedImage.swift */,
 				34535D162890F36000CCA78B /* FeedLoader.swift */,
 				344614FB28A39B1A0076062D /* FeedCache.swift */,
+				3446150528A498D00076062D /* FeedImageDataCache.swift */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -932,6 +935,7 @@
 				3408243E289A37CE002E68FF /* FeedStore.swift in Sources */,
 				3408243C289A3785002E68FF /* LocalFeedLoader.swift in Sources */,
 				3408241E28979B7E002E68FF /* HTTPClient.swift in Sources */,
+				3446150628A498D00076062D /* FeedImageDataCache.swift in Sources */,
 				3446143928A204AB0076062D /* FeedPresenter.swift in Sources */,
 				3446145128A243370076062D /* HTTPURLResponse+StatusCode.swift in Sources */,
 				34535D152890F31300CCA78B /* FeedImage.swift in Sources */,
