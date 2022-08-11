@@ -35,7 +35,9 @@ class FeedAcceptanceTest: XCTestCase {
     }
     
     func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
+        let feed = launch(httpClient: .offline, store: .empty)
         
+        XCTAssertEqual(feed.numberOfRenderedImageViews(), 0)
     }
 
     // MARK: - Helpers
