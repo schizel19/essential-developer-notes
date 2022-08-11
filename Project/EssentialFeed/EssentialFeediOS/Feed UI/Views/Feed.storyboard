@@ -93,6 +93,7 @@ Location</string>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-sd-bmr">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3X-09-jkL">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -145,6 +146,7 @@ Location</string>
                                         <constraint firstAttribute="bottomMargin" secondItem="Ux6-Gx-1GV" secondAttribute="bottom" priority="999" constant="6" id="ssU-VE-nO9"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="uvl-ZU-Ak7" id="c7m-YQ-P7M"/>
                                     <outlet property="feedImageContainer" destination="UhW-kb-M9n" id="Gf9-x7-UcG"/>
