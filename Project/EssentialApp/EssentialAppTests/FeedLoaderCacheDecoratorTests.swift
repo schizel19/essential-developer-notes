@@ -5,7 +5,6 @@
 //  Created by Patrick Domingo on 8/10/22
 //
 
-import Foundation
 import XCTest
 import EssentialFeed
 import EssentialApp
