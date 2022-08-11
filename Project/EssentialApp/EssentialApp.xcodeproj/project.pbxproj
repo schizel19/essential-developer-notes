@@ -49,6 +49,7 @@
 		3446153A28A4EB900076062D /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446151F28A4EAAD0076062D /* FeedLoaderPresentationAdapter.swift */; };
 		3446153B28A4EB900076062D /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152128A4EAAD0076062D /* FeedViewAdapter.swift */; };
 		3446153C28A4EB900076062D /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446151E28A4EAAD0076062D /* WeakRefVirtualProxy.swift */; };
+		3446153E28A4ED230076062D /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446153D28A4ED230076062D /* FeedAcceptanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		3446152A28A4EB080076062D /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446152B28A4EB080076062D /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446153528A4EB3A0076062D /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
+		3446153D28A4ED230076062D /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				344614F528A393600076062D /* FeedLoaderCacheDecoratorTests.swift */,
 				344614FF28A493220076062D /* FeedImageDataLoaderCacheDecoratorTests.swift */,
 				3446151A28A4E7B10076062D /* SceneDelegateTests.swift */,
+				3446153D28A4ED230076062D /* FeedAcceptanceTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				3446153228A4EB090076062D /* UIRefreshControl+TestHelpers.swift in Sources */,
 				344614E928A356170076062D /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				344614F628A393600076062D /* FeedLoaderCacheDecoratorTests.swift in Sources */,
+				3446153E28A4ED230076062D /* FeedAcceptanceTests.swift in Sources */,
 				344614F828A394C00076062D /* FeedLoaderStub.swift in Sources */,
 				3446153628A4EB3A0076062D /* FeedUIIntegrationTests.swift in Sources */,
 				344614F228A376C80076062D /* XCTestCase+MemoryLeakTracking.swift in Sources */,
