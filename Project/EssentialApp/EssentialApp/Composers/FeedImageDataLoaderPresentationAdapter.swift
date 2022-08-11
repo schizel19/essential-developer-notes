@@ -1,12 +1,13 @@
 //
 //  FeedImageDataLoaderPresentationAdapter.swift
-//  EssentialFeediOS
+//  EssentialFeedApp
 //  
 //  Created by Patrick Domingo on 8/8/22
 //
 
 import Foundation
 import EssentialFeed
+import EssentialFeediOS
 import UIKit
 
 final class FeedImageDataLoaderPresentationAdapter<View: FeedImageView, Image>: FeedImageCellControllerDelegate where View.Image == Image {

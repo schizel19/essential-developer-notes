@@ -1,11 +1,12 @@
 //
 //  FeedUIComposer.swift
-//  EssentialFeediOS
+//  EssentialFeedApp
 //
 //  Created by Patrick Domingo on 8/7/22.
 //
 
 import EssentialFeed
+import EssentialFeediOS
 import UIKit
 
 public final class FeedUIComposer {

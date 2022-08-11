@@ -1,11 +1,12 @@
 //
 //  FeedLoaderPresentationAdapter.swift
-//  EssentialFeediOS
+//  EssentialFeedApp
 //  
 //  Created by Patrick Domingo on 8/8/22
 //
 
 import EssentialFeed
+import EssentialFeediOS
 
 final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
     private let feedLoader: FeedLoader

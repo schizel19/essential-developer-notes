@@ -1,6 +1,6 @@
 //
 //  MainQueueDispatchDecorator.swift
-//  EssentialFeediOS
+//  EssentialFeedApp
 //  
 //  Created by Patrick Domingo on 8/8/22
 //
