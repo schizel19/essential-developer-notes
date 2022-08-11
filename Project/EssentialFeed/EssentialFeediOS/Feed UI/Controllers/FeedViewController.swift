@@ -24,7 +24,19 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
         super.viewDidLoad()
         refresh()
     }
+
+    @IBAction private func refresh() {
+        delegate?.didRequestFeedRefresh()
+    }
     
+    public func display(_ viewModel: FeedLoadingViewModel) {
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
+    }
+    
+    public func display(_ viewModel: FeedErrorViewModel) {
+        errorView?.message = viewModel.message
+    }
+
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.count
     }
@@ -42,29 +54,16 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
             cellController(forRowAt: indexPath).preload()
         }
     }
-    
+
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach(cancelCellControllerLoad)
     }
-    
+
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
         return tableModel[indexPath.row]
     }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-        tableModel[indexPath.row].cancelLoad()
-    }
-    
-    @IBAction private func refresh() {
-        delegate?.didRequestFeedRefresh()
-    }
-    
-    public func display(_ viewModel: FeedLoadingViewModel) {
-        refreshControl?.update(isRefreshing: viewModel.isLoading)
-    }
-    
-    public func display(_ viewModel: FeedErrorViewModel) {
-        errorView?.message = viewModel.message
+        cellController(forRowAt: indexPath).cancelLoad()
     }
 }
- 
