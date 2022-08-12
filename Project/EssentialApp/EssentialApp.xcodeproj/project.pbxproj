@@ -38,6 +38,7 @@
 		3446153B28A4EB900076062D /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152128A4EAAD0076062D /* FeedViewAdapter.swift */; };
 		3446153C28A4EB900076062D /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446151E28A4EAAD0076062D /* WeakRefVirtualProxy.swift */; };
 		3446153E28A4ED230076062D /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446153D28A4ED230076062D /* FeedAcceptanceTests.swift */; };
+		3446154B28A6290A0076062D /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446154A28A6290A0076062D /* CombineHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		3446152B28A4EB080076062D /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446153528A4EB3A0076062D /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		3446153D28A4ED230076062D /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
+		3446154A28A6290A0076062D /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3446152228A4EAAD0076062D /* Composers */,
+				3446154A28A6290A0076062D /* CombineHelpers.swift */,
 				344614B028A352470076062D /* AppDelegate.swift */,
 				344614B228A352470076062D /* SceneDelegate.swift */,
 				344614B928A352480076062D /* Assets.xcassets */,
@@ -315,6 +318,7 @@
 				344614B128A352470076062D /* AppDelegate.swift in Sources */,
 				3446153C28A4EB900076062D /* WeakRefVirtualProxy.swift in Sources */,
 				344614B328A352470076062D /* SceneDelegate.swift in Sources */,
+				3446154B28A6290A0076062D /* CombineHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
