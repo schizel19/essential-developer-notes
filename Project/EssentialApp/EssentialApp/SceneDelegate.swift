@@ -29,9 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return LocalFeedLoader(store: store, currentDate: Date.init)
     }()
     
-//    // FIXME: This is a bug in iOS 14+ where the RemoteFeedLoader is deallocated, so we must hold a reference to it
-    private var remoteFeedLoader: RemoteLoader<[FeedImage]>?
-    
     convenience init(httpClient: HTTPClient, store: FeedStore & FeedImageDataStore) {
         self.init()
         self.httpClient = httpClient
@@ -61,10 +58,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func makeRemoteFeedLoaderWithLocalFallback() -> FeedLoader.Publisher {
         let remoteUrl = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
-        let remoteFeedLoader = RemoteLoader(url: remoteUrl, client: httpClient, mapper: FeedItemsMapper.map)
-        self.remoteFeedLoader = remoteFeedLoader
-        return remoteFeedLoader
-            .loadPublisher()
+        
+        return httpClient
+            .getPublisher(url: remoteUrl)
+            .tryMap(FeedItemsMapper.map)
             .caching(to: localFeedLoader)
             .fallback(to: localFeedLoader.loadPublisher)
     }
