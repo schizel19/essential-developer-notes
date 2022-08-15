@@ -1,20 +1,20 @@
 //
-//  FeedItemsMapper.swift
+//  ImageCommentsMapper.swift
 //  EssentialFeed
 //  
-//  Created by Patrick Domingo on 8/1/22
+//  Created by Patrick Domingo on 8/15/22
 //
 
 import Foundation
 
-final class FeedItemsMapper {
+final class ImageCommentsMapper {
     private struct Root: Decodable {
         let items: [RemoteFeedItem]
     }
     
     static func map(_ data: Data, from response: HTTPURLResponse) throws -> [RemoteFeedItem] {
         guard response.isOK, let root = try? JSONDecoder().decode(Root.self, from: data) else {
-            throw (RemoteFeedLoader.Error.invalidData)
+            throw (RemoteImageCommentsLoader.Error.invalidData)
         }
         return root.items
     }
