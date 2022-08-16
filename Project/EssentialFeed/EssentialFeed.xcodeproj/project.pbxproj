@@ -403,10 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				80A62F3B289FA29200A4D69E /* UIView+Shimmering.swift */,
-				3446140528A0D2610076062D /* UITableView+Dequeueing.swift */,
 				3446140728A0D3310076062D /* UIImageView+Animations.swift */,
-				3446142E28A1FB620076062D /* UIRefreshControl+Helpers.swift */,
-				3446154428A5DCD60076062D /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -538,6 +535,42 @@
 			path = "Image Comments Presentation";
 			sourceTree = "<group>";
 		};
+		3446158728AB61F80076062D /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				3446158928AB620D0076062D /* Views */,
+				3446158828AB61FF0076062D /* Controllers */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		3446158828AB61FF0076062D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80A4C788289E59EC00B70AB1 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3446158928AB620D0076062D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3446158A28AB62190076062D /* Helpers */,
+				3446142928A1F89A0076062D /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3446158A28AB62190076062D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3446140528A0D2610076062D /* UITableView+Dequeueing.swift */,
+				3446142E28A1FB620076062D /* UIRefreshControl+Helpers.swift */,
+				3446154428A5DCD60076062D /* UITableView+HeaderSizing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		34535CF22890F21A00CCA78B = {
 			isa = PBXGroup;
 			children = (
@@ -647,6 +680,7 @@
 		80A4C787289E59DF00B70AB1 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				3446158728AB61F80076062D /* Shared UI */,
 				80A62F40289FC28D00A4D69E /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -664,7 +698,6 @@
 		80A62F41289FC29800A4D69E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				80A4C788289E59EC00B70AB1 /* ListViewController.swift */,
 				80A62F58289FCC2100A4D69E /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -677,7 +710,6 @@
 				80A4C78A289F8F5600B70AB1 /* FeedImageCell.swift */,
 				344613FF28A0C83A0076062D /* Feed.storyboard */,
 				3446140128A0C8B20076062D /* Feed.xcassets */,
-				3446142928A1F89A0076062D /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
