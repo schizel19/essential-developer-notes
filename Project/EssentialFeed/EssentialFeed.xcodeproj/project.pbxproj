@@ -648,16 +648,8 @@
 			isa = PBXGroup;
 			children = (
 				80A62F40289FC28D00A4D69E /* Feed UI */,
-				80A62F3D289FC26A00A4D69E /* Feed Image Loader */,
 			);
 			path = EssentialFeediOS;
-			sourceTree = "<group>";
-		};
-		80A62F3D289FC26A00A4D69E /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 		80A62F40289FC28D00A4D69E /* Feed UI */ = {
