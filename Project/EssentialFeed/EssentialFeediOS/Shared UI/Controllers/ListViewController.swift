@@ -8,11 +8,7 @@
 import EssentialFeed
 import UIKit
 
-public protocol CellController {
-    func view(in tableView: UITableView) -> UITableViewCell
-    func preload()
-    func cancelLoad()
-}
+public typealias CellController = UITableViewDataSource & UITableViewDelegate & UITableViewDataSourcePrefetching
 
 public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView  {
     @IBOutlet private(set) public var errorView: ErrorView?
