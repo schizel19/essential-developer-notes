@@ -9,14 +9,6 @@ import EssentialFeed
 import UIKit
 
 public class ImageCommentCellController: CellController {
-    public func preload() {
-        
-    }
-    
-    public func cancelLoad() {
-        
-    }
-    
     private let model: ImageCommentViewModel
     
     public init(model: ImageCommentViewModel) {
