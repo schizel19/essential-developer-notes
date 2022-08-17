@@ -13,7 +13,8 @@ public protocol FeedImageCellControllerDelegate {
     func didCancelImageRequest()
 }
 
-public final class FeedImageCellController: ResourceView, ResourceLoadingView, ResourceErrorView, CellController {
+public final class FeedImageCellController: NSObject, ResourceView, ResourceLoadingView, ResourceErrorView, CellController {
+    
     public typealias ResourceViewModel = UIImage
     private let viewModel: FeedImageViewModel
     private let delegate: FeedImageCellControllerDelegate
@@ -22,25 +23,6 @@ public final class FeedImageCellController: ResourceView, ResourceLoadingView, R
     public init(viewModel: FeedImageViewModel, delegate: FeedImageCellControllerDelegate) {
         self.viewModel = viewModel
         self.delegate = delegate
-    }
-    
-    public func view(in tableView: UITableView) -> UITableViewCell {
-        cell = tableView.dequeueReusableCell()
-        cell?.locationContainer.isHidden = !viewModel.hasLocation
-        cell?.locationLabel.text = viewModel.location
-        cell?.descriptionLabel.text = viewModel.description
-        cell?.onRetry = delegate.didRequestImage
-        delegate.didRequestImage()
-        return cell!
-    }
-    
-    public func preload() {
-        delegate.didRequestImage()
-    }
-    
-    public func cancelLoad() {
-        releaseCellForReuse()
-        delegate.didCancelImageRequest()
     }
     
     public func display(_ viewModel: UIImage) {
@@ -57,6 +39,37 @@ public final class FeedImageCellController: ResourceView, ResourceLoadingView, R
     
     private func releaseCellForReuse() {
         cell = nil
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        cell = tableView.dequeueReusableCell()
+        cell?.locationContainer.isHidden = !viewModel.hasLocation
+        cell?.locationLabel.text = viewModel.location
+        cell?.descriptionLabel.text = viewModel.description
+        cell?.onRetry = delegate.didRequestImage
+        delegate.didRequestImage()
+        return cell!
+    }
+    
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        delegate.didRequestImage()
+    }
+    
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cancelLoad()
+    }
+    
+    public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        cancelLoad()
+    }
+    
+    private func cancelLoad() {
+        releaseCellForReuse()
+        delegate.didCancelImageRequest()
     }
 }
 
