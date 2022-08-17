@@ -20,9 +20,33 @@ extension ListViewController {
         refreshControl?.simulatePullToRefresh()
     }
     
+    var isShowingLoadingIndicator: Bool {
+        return refreshControl?.isRefreshing == true
+    }
+    
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
+    }
+    
+    var errorMessage: String? {
+        return errorView.message
+    }
+}
+
+// MARK: - Feed
+extension ListViewController {
+    
     @discardableResult
     func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
         return feedImageView(at: index) as? FeedImageCell
+    }
+    
+    func numberOfRenderedImageViews() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
+    }
+    
+    var feedImagesSection: Int {
+        return 0
     }
     
     func simulateFeedImageViewNearVisible(at row: Int) {
@@ -50,20 +74,8 @@ extension ListViewController {
         return view
     }
     
-    func simulateErrorViewTap() {
-        errorView.simulateTap()
-    }
-    
     func renderedFeedImageData(at index: Int) -> Data? {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
-    }
-    
-    var isShowingLoadingIndicator: Bool {
-        return refreshControl?.isRefreshing == true
-    }
-        
-    func numberOfRenderedImageViews() -> Int {
-        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
@@ -74,12 +86,26 @@ extension ListViewController {
         let index = IndexPath(row: row, section: feedImagesSection)
         return ds?.tableView(tableView, cellForRowAt: index)
     }
+}
+
+// MARK: - Comments
+extension ListViewController {
     
-    var feedImagesSection: Int {
+    func numberOfRenderedComments() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: imageCommentsSection)
+    }
+    
+    var imageCommentsSection: Int {
         return 0
     }
     
-    var errorMessage: String? {
-        return errorView.message
+    func commentsView(at row: Int) -> UITableViewCell? {
+        guard numberOfRenderedComments() > row else {
+            return nil
+        }
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: imageCommentsSection)
+        return ds?.tableView(tableView, cellForRowAt: index)
     }
 }
+

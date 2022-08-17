@@ -5,7 +5,6 @@
 //  Created by Patrick Domingo on 8/17/22
 //
 
-
 import EssentialFeed
 import EssentialFeediOS
 import UIKit
@@ -15,32 +14,29 @@ public class CommentsUIComposer {
     
     private init() { }
     
+    private typealias CommentsPresentationAdapter = LoadResourcePresentationAdapter<[ImageComment], CommentsViewAdapter>
+    
     public static func commentsComposedWith(
-        commentsLoader: @escaping () -> AnyPublisher<[FeedImage], Error>
+        commentsLoader: @escaping () -> AnyPublisher<[ImageComment], Error>
     ) -> ListViewController {
-        let presentationAdapter = LoadResourcePresentationAdapter<[FeedImage], FeedViewAdapter>(loader: commentsLoader)
+        let presentationAdapter = CommentsPresentationAdapter(loader: commentsLoader)
         
-        let feedController = ListViewController.makeWith(title: ImageCommentsPresenter.title)
-        feedController.onRefresh = presentationAdapter.loadResource
+        let commentsViewController = makeCommentsViewController(title: ImageCommentsPresenter.title)
+        commentsViewController.onRefresh = presentationAdapter.loadResource
         presentationAdapter.presenter = LoadResourcePresenter(
-            resourceView: FeedViewAdapter(
-                controller: feedController,
-                imageLoader: { _ in Empty<Data, Error>().eraseToAnyPublisher() }),
-            loadingView: WeakRefVirtualProxy(feedController),
-            errorView: WeakRefVirtualProxy(feedController),
-            mapper: FeedPresenter.map)
+            resourceView: CommentsViewAdapter(controller: commentsViewController),
+            loadingView: WeakRefVirtualProxy(commentsViewController),
+            errorView: WeakRefVirtualProxy(commentsViewController),
+            mapper:  { ImageCommentsPresenter.map($0) } )
         
-        return feedController
+        return commentsViewController
     }
     
-}
-
-private extension ListViewController {
-    static func makeWith(title: String) -> ListViewController {
+    private static func makeCommentsViewController(title: String) -> ListViewController {
         let bundle = Bundle(for: ListViewController.self)
-        let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
-        let feedController = storyboard.instantiateInitialViewController() as! ListViewController
-        feedController.title = title
-        return feedController
+        let storyboard = UIStoryboard(name: "ImageComments", bundle: bundle)
+        let controller = storyboard.instantiateInitialViewController() as! ListViewController
+        controller.title = title
+        return controller
     }
 }
