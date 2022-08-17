@@ -43,6 +43,10 @@ extension ListViewController {
         return view
     }
     
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
+    }
+    
     func renderedFeedImageData(at index: Int) -> Data? {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
@@ -69,6 +73,6 @@ extension ListViewController {
     }
     
     var errorMessage: String? {
-        return errorView?.message
+        return errorView.message
     }
 }
