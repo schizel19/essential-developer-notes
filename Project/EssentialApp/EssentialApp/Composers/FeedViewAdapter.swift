@@ -57,7 +57,7 @@ final class CommentsViewAdapter: ResourceView {
     
     func display(_ viewModel: ImageCommentsViewModel) {
         controller?.display(viewModel.comments.map { viewModel in
-            CellController(id: viewModel, UITableViewController())
+            CellController(id: viewModel, ImageCommentCellController(model: viewModel))
         })
     }
 }

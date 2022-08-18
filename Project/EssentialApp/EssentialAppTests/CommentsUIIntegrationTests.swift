@@ -179,36 +179,13 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
         guard sut.numberOfRenderedComments() == comments.count else {
             return XCTFail("Expected \(comments.count), got \(sut.numberOfRenderedComments()) instead.", file: file, line: line)
         }
+        
+        let viewModel = ImageCommentsPresenter.map(comments)
          
-        comments.enumerated().forEach { (index, comment) in
-            assertThat(sut, hasViewConfiguredFor: comment, at: index, file: file, line: line )
+        viewModel.comments.enumerated().forEach { (index, comment) in
+            XCTAssertEqual(sut.commentMessage(at: index), comment.message, "message at \(index)", file: file, line: line)
+            XCTAssertEqual(sut.commentDate(at: index), comment.date, "date at \(index)", file: file, line: line)
+            XCTAssertEqual(sut.commentUsername(at: index), comment.username, "username at \(index)", file: file, line: line)
         }
-    }
-    
-    private func assertThat(_ sut: ListViewController, hasViewConfiguredFor comment: ImageComment, at index: Int, file: StaticString = #filePath, line: UInt = #line) {
-        let view = sut.commentsView(at: index)
-        
-        guard let cell = view as? ImageCommentCell else {
-            return XCTFail("Expected \(ImageCommentCell.self) instance, got \(String(describing: view)) instead", file: file, line: line)
-        }
-        
-        XCTAssertEqual(cell.commentMessage, comment.message)
-        XCTAssertEqual(cell.username, comment.username)
-        
-//        XCTAssertEqual(cell.isShowingLocation, shouldLocationBeVisible, "Expected `isShowingLocation` to be \(shouldLocationBeVisible) for image view at index \(index)", file: file, line: line)
-
-//        XCTAssertEqual(cell.locationText, image.location, "Expected location text to be \(String(describing: image.location)) for image view at index \(index)", file: file, line: line)
-//
-//        XCTAssertEqual(cell.descriptionText, image.description, "Expected description text to be \(String(describing: image.description)) for image view at index \(index)", file: file, line: line)
-    }
-}
-
-extension ImageCommentCell {
-    var commentMessage: String? {
-        return messageLabel.text
-    }
-    
-    var username: String? {
-        return usernameLabel.text
     }
 }

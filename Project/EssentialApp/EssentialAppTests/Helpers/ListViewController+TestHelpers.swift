@@ -1,5 +1,5 @@
 //
-//  FeedViewController+TestHelpers.swift
+//  ListViewController+TestHelpers.swift
 //  EssentialFeediOSTests
 //
 //  Created by Patrick Domingo on 8/7/22.
@@ -99,13 +99,25 @@ extension ListViewController {
         return 0
     }
     
-    func commentsView(at row: Int) -> UITableViewCell? {
+    private func commentView(at row: Int) -> ImageCommentCell? {
         guard numberOfRenderedComments() > row else {
             return nil
         }
         let ds = tableView.dataSource
         let index = IndexPath(row: row, section: imageCommentsSection)
-        return ds?.tableView(tableView, cellForRowAt: index)
+        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
+    }
+    
+    func commentMessage(at row: Int) -> String? {
+        commentView(at: row)?.messageLabel.text
+    }
+    
+    func commentDate(at row: Int) -> String? {
+        commentView(at: row)?.dateLabel.text
+    }
+    
+    func commentUsername(at row: Int) -> String? {
+        commentView(at: row)?.usernameLabel.text
     }
 }
 
