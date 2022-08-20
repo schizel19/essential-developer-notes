@@ -1,7 +1,0 @@
-Book list
-
-Design Patterns: Elements of Reusable Object-Oriented Software
-Erich Gamma, Ralph Johnson, John Vlissides, Richard Helm
-1994
-https://www.goodreads.com/book/show/85009.Design_Patterns
-
