@@ -44,6 +44,7 @@
 		346E812C28ACCFAB004F7D56 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E812B28ACCFAB004F7D56 /* CommentsUIIntegrationTests.swift */; };
 		346E812E28ACD083004F7D56 /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E812D28ACD083004F7D56 /* CommentsUIComposer.swift */; };
 		346E813028ACD6EB004F7D56 /* ImageCommentCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E812F28ACD6EB004F7D56 /* ImageCommentCell+Helpers.swift */; };
+		347A5C4528B307CE0087933B /* Paginated+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C4428B307CE0087933B /* Paginated+Combine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		346E812B28ACCFAB004F7D56 /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
 		346E812D28ACD083004F7D56 /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
 		346E812F28ACD6EB004F7D56 /* ImageCommentCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageCommentCell+Helpers.swift"; sourceTree = "<group>"; };
+		347A5C4428B307CE0087933B /* Paginated+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Paginated+Combine.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				346E812528ACCEB5004F7D56 /* LocalFeedLoader+Combine.swift */,
 				346E812728ACCEC6004F7D56 /* FallbackPublisher.swift */,
 				346E812928ACCF02004F7D56 /* DispatchQueueMain+Combine.swift */,
+				347A5C4428B307CE0087933B /* Paginated+Combine.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				346E812228ACCE47004F7D56 /* FeedImageDataCache+Combine.swift in Sources */,
 				3446153A28A4EB900076062D /* LoadResourcePresentationAdapter.swift in Sources */,
 				346E812628ACCEB5004F7D56 /* LocalFeedLoader+Combine.swift in Sources */,
+				347A5C4528B307CE0087933B /* Paginated+Combine.swift in Sources */,
 				3446153B28A4EB900076062D /* FeedViewAdapter.swift in Sources */,
 				346E812028ACCE11004F7D56 /* HTTPClient+Combine.swift in Sources */,
 				3446153728A4EB840076062D /* FeedUIComposer.swift in Sources */,
