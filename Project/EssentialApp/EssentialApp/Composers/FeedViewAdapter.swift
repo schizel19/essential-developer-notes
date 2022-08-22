@@ -49,7 +49,7 @@ final class FeedViewAdapter: ResourceView {
             controller?.display(feed)
             return
         }
-
+        
         let loadMoreAdapter = LoadMorePresentationAdapter(loader: loadMorePublisher)
         let loadMore = LoadMoreCellController(callback: loadMoreAdapter.loadResource)
 
@@ -57,7 +57,7 @@ final class FeedViewAdapter: ResourceView {
             resourceView: self,
             loadingView: WeakRefVirtualProxy(loadMore),
             errorView: WeakRefVirtualProxy(loadMore))
-        
+
         let loadMoreSection = [CellController(id: UUID(), loadMore)]
         
         controller?.display(feed, loadMoreSection)
@@ -74,4 +74,3 @@ extension UIImage {
         return image
     }
 }
-

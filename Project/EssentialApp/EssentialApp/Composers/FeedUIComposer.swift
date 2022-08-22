@@ -11,7 +11,7 @@ import UIKit
 import Combine
 
 public final class FeedUIComposer {
-    private init() { }
+    private init() {}
     
     private typealias FeedPresentationAdapter = LoadResourcePresentationAdapter<Paginated<FeedImage>, FeedViewAdapter>
     
@@ -22,8 +22,9 @@ public final class FeedUIComposer {
     ) -> ListViewController {
         let presentationAdapter = FeedPresentationAdapter(loader: feedLoader)
         
-        let feedController = ListViewController.makeWith(title: FeedPresenter.title)
+        let feedController = makeFeedViewController(title: FeedPresenter.title)
         feedController.onRefresh = presentationAdapter.loadResource
+        
         presentationAdapter.presenter = LoadResourcePresenter(
             resourceView: FeedViewAdapter(
                 controller: feedController,
@@ -34,10 +35,8 @@ public final class FeedUIComposer {
         
         return feedController
     }
-}
 
-private extension ListViewController {
-    static func makeWith(title: String) -> ListViewController {
+    private static func makeFeedViewController(title: String) -> ListViewController {
         let bundle = Bundle(for: ListViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
         let feedController = storyboard.instantiateInitialViewController() as! ListViewController
