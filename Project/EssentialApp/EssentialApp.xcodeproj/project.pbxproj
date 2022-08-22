@@ -21,7 +21,7 @@
 		3446150428A497C70076062D /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446150328A497C70076062D /* XCTestCase+FeedImageDataLoader.swift */; };
 		3446151B28A4E7B10076062D /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446151A28A4E7B10076062D /* SceneDelegateTests.swift */; };
 		3446152C28A4EB090076062D /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152A28A4EB080076062D /* UIButton+TestHelpers.swift */; };
-		3446152D28A4EB090076062D /* FeedUIIntegrationTestsLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152628A4EB080076062D /* FeedUIIntegrationTestsLoaderSpy.swift */; };
+		3446152D28A4EB090076062D /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152628A4EB080076062D /* FeedUIIntegrationTests+LoaderSpy.swift */; };
 		3446152F28A4EB090076062D /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152728A4EB080076062D /* FeedImageCell+TestHelpers.swift */; };
 		3446153028A4EB090076062D /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152528A4EB080076062D /* UIControl+TestHelpers.swift */; };
 		3446153128A4EB090076062D /* ListViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446152328A4EB070076062D /* ListViewController+TestHelpers.swift */; };
@@ -93,7 +93,7 @@
 		3446152328A4EB070076062D /* ListViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446152428A4EB070076062D /* FeedUIIntegrationTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+Assertions.swift"; sourceTree = "<group>"; };
 		3446152528A4EB080076062D /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
-		3446152628A4EB080076062D /* FeedUIIntegrationTestsLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTestsLoaderSpy.swift; sourceTree = "<group>"; };
+		3446152628A4EB080076062D /* FeedUIIntegrationTests+LoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+LoaderSpy.swift"; sourceTree = "<group>"; };
 		3446152728A4EB080076062D /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446152928A4EB080076062D /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		3446152A28A4EB080076062D /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 				3446152528A4EB080076062D /* UIControl+TestHelpers.swift */,
 				3446152328A4EB070076062D /* ListViewController+TestHelpers.swift */,
 				3446152728A4EB080076062D /* FeedImageCell+TestHelpers.swift */,
-				3446152628A4EB080076062D /* FeedUIIntegrationTestsLoaderSpy.swift */,
+				3446152628A4EB080076062D /* FeedUIIntegrationTests+LoaderSpy.swift */,
 				3446152428A4EB070076062D /* FeedUIIntegrationTests+Assertions.swift */,
 				344614F328A376FA0076062D /* SharedTestHelpers.swift */,
 				3446150128A497670076062D /* FeedImageDataLoaderSpy.swift */,
@@ -356,7 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				344614F428A376FA0076062D /* SharedTestHelpers.swift in Sources */,
-				3446152D28A4EB090076062D /* FeedUIIntegrationTestsLoaderSpy.swift in Sources */,
+				3446152D28A4EB090076062D /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */,
 				3446153328A4EB090076062D /* UIImage+TestHelpers.swift in Sources */,
 				346E813028ACD6EB004F7D56 /* ImageCommentCell+Helpers.swift in Sources */,
 				3446153128A4EB090076062D /* ListViewController+TestHelpers.swift in Sources */,
