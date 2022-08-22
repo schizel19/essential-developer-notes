@@ -23,17 +23,15 @@ extension LocalFeedImageDataLoader: FeedImageDataCache {
     }
     
     public func save(_ data: Data, for url: URL, completion: @escaping (SaveResult) -> Void) {
-        store.insert(data, for: url) { [weak self] result in
-            guard self != nil else { return }
-
-            completion(result.mapError { _ in SaveError.failed })
-        }
+        completion(SaveResult {
+            try store.insert(data, for: url)
+        }.mapError { _ in SaveError.failed })
     }
 }
 
 extension LocalFeedImageDataLoader: FeedImageDataLoader {
     public typealias LoadResult = FeedImageDataLoader.Result
-
+    
     public enum LoadError: Error {
         case failed
         case notFound
@@ -65,11 +63,12 @@ extension LocalFeedImageDataLoader: FeedImageDataLoader {
             guard self != nil else { return }
             
             task.complete(with: result
-                .mapError { _ in LoadError.failed }
-                .flatMap { data in
-                    data.map { .success($0) } ?? .failure(LoadError.notFound)
-                })
+                            .mapError { _ in LoadError.failed }
+                            .flatMap { data in
+                                data.map { .success($0) } ?? .failure(LoadError.notFound)
+                            })
         }
         return task
     }
 }
+
