@@ -60,7 +60,8 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
             snapshot.appendSections([section])
             snapshot.appendItems(cellControllers, toSection: section)
         }
-        dataSource.apply(snapshot)
+        
+        dataSource.applySnapshotUsingReloadData(snapshot)
     }
 
     public func display(_ viewModel: ResourceLoadingViewModel) {
