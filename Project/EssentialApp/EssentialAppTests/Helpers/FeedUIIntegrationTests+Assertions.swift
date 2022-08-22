@@ -1,5 +1,5 @@
 //
-//  FeedViewControllers+Assertions.swift
+//  FeedUIIntegrationTests+Assertions.swift
 //  EssentialFeediOSTests
 //
 //  Created by Patrick Domingo on 8/7/22.
