@@ -45,6 +45,7 @@
 		347A5C4B28B30E530087933B /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C4A28B30E530087933B /* InMemoryFeedStore.swift */; };
 		347A5C4D28B30E6A0087933B /* HTTPClient+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C4C28B30E6A0087933B /* HTTPClient+Stub.swift */; };
 		347A5C4F28B3148B0087933B /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C4E28B3148B0087933B /* UIView+TestHelpers.swift */; };
+		347A5C5128B31E700087933B /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C5028B31E700087933B /* NullStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		347A5C4A28B30E530087933B /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
 		347A5C4C28B30E6A0087933B /* HTTPClient+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Stub.swift"; sourceTree = "<group>"; };
 		347A5C4E28B3148B0087933B /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		347A5C5028B31E700087933B /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				3446152128A4EAAD0076062D /* FeedViewAdapter.swift */,
 				3446151C28A4EAAD0076062D /* FeedUIComposer.swift */,
 				346E812D28ACD083004F7D56 /* CommentsUIComposer.swift */,
+				347A5C5028B31E700087933B /* NullStore.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				346E812228ACCE47004F7D56 /* FeedImageDataCache+Combine.swift in Sources */,
 				3446153A28A4EB900076062D /* LoadResourcePresentationAdapter.swift in Sources */,
+				347A5C5128B31E700087933B /* NullStore.swift in Sources */,
 				346E812628ACCEB5004F7D56 /* LocalFeedLoader+Combine.swift in Sources */,
 				347A5C4528B307CE0087933B /* Paginated+Combine.swift in Sources */,
 				3446153B28A4EB900076062D /* FeedViewAdapter.swift in Sources */,
