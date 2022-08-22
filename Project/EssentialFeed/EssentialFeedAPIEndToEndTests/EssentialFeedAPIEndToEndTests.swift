@@ -148,5 +148,4 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         return URL(string: "https://url-\(index+1).com")!
     }
 }
-Footer
 
