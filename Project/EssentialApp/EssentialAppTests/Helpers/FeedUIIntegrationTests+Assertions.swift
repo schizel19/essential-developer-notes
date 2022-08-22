@@ -13,8 +13,8 @@ extension FeedUIIntegrationTests {
     func assertThat(_ sut: ListViewController, isRendering feed: [FeedImage], file: StaticString = #filePath, line: UInt = #line) {
         sut.tableView.layoutIfNeeded()
         RunLoop.main.run(until: Date())
-        guard sut.numberOfRenderedImageViews() == feed.count else {
-            return XCTFail("Expected \(feed.count), got \(sut.numberOfRenderedImageViews()) instead.", file: file, line: line)
+        guard sut.numberOfRenderedFeedImageViews() == feed.count else {
+            return XCTFail("Expected \(feed.count), got \(sut.numberOfRenderedFeedImageViews()) instead.", file: file, line: line)
         }
          
         feed.enumerated().forEach { (index, image) in
