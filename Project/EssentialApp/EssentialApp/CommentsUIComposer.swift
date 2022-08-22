@@ -10,9 +10,8 @@ import EssentialFeediOS
 import UIKit
 import Combine
 
-public class CommentsUIComposer {
-    
-    private init() { }
+public final class CommentsUIComposer {
+    private init() {}
     
     private typealias CommentsPresentationAdapter = LoadResourcePresentationAdapter<[ImageComment], CommentsViewAdapter>
     
@@ -21,17 +20,18 @@ public class CommentsUIComposer {
     ) -> ListViewController {
         let presentationAdapter = CommentsPresentationAdapter(loader: commentsLoader)
         
-        let commentsViewController = makeCommentsViewController(title: ImageCommentsPresenter.title)
-        commentsViewController.onRefresh = presentationAdapter.loadResource
-        presentationAdapter.presenter = LoadResourcePresenter(
-            resourceView: CommentsViewAdapter(controller: commentsViewController),
-            loadingView: WeakRefVirtualProxy(commentsViewController),
-            errorView: WeakRefVirtualProxy(commentsViewController),
-            mapper:  { ImageCommentsPresenter.map($0) } )
+        let commentsController = makeCommentsViewController(title: ImageCommentsPresenter.title)
+        commentsController.onRefresh = presentationAdapter.loadResource
         
-        return commentsViewController
+        presentationAdapter.presenter = LoadResourcePresenter(
+            resourceView: CommentsViewAdapter(controller: commentsController),
+            loadingView: WeakRefVirtualProxy(commentsController),
+            errorView: WeakRefVirtualProxy(commentsController),
+            mapper: { ImageCommentsPresenter.map($0) })
+        
+        return commentsController
     }
-    
+
     private static func makeCommentsViewController(title: String) -> ListViewController {
         let bundle = Bundle(for: ListViewController.self)
         let storyboard = UIStoryboard(name: "ImageComments", bundle: bundle)
@@ -41,7 +41,7 @@ public class CommentsUIComposer {
     }
 }
 
-private final class CommentsViewAdapter: ResourceView {
+final class CommentsViewAdapter: ResourceView {
     private weak var controller: ListViewController?
     
     init(controller: ListViewController) {
